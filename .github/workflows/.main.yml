@@ -17,6 +17,6 @@ jobs:
         uses: actions/setup-java@v1
         with:
             java-version: '11'
-    #finally build your app with the latest command
+    #finally build your app with the latest commande
       - name: Build and test with Maven    
         run: mvn -B package --file simple-api/pom.xml
