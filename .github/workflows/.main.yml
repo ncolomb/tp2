@@ -18,7 +18,9 @@ jobs:
         with:
             java-version: '11'
     #finally build your app with the latest commande
-      - name: Build and test with Maven    
+      - name: Build and test with Maven 
+        env: 
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: mvn -B verify sonar:sonar -Dsonar.projectKey=ncolomb_tp2
             -Dsonar.organization=ncolomb
             -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{
